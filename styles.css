@@ -66,3 +66,11 @@ jobs:
 
 
 //////
+    RUN npm install -g @angular/cli
+    WORKDIR /app
+    COPY . .
+    RUN npm install
+    RUN ng build --prod
+    EXPOSE 80
+    CMD ["npx", "http-server", "dist/your-app-name"]
+    
