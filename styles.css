@@ -81,7 +81,6 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           credentials: ${{ secrets.GCP_CREDENTIALS }}
 
-this wrong no it not
 
 
-///////
+////////
