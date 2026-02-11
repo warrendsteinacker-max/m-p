@@ -27,7 +27,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:3000/mposts', {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify(Istate)}).then((res) => {return res.json()}).then((data) => {console.log(data)}).catch((error)=> console.error(error.message))
+    fetch('http://localhost:3000/mposts', {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify(state)}).then((res) => {return res.json()}).then((data) => {console.log(data)}).catch((error)=> console.error(error.message))
   }
 
 
@@ -38,13 +38,12 @@ function App() {
       <div id='Top' > HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH </div>
 
       <form onSubmit={handleSubmit}>
-        <input value={state.name} type='text' onChange={(e) => dispatch({type: NAME, payload: e.target.value})}></input>
-        <input value={state.age} type='text' onChange={(e) => dispatch({type: AGE, payload: e.target.value})}></input>
+        <input value={state.name} type='text' onChange={(e) => dispatch({type: 'NAME', payload: e.target.value})}></input>
+        <input value={state.age} type='text' onChange={(e) => dispatch({type: 'AGE', payload: e.target.value})}></input>
         <button type='submit'>post to back</button>
       </form>
-      <button onclick={() => fetch('http://localhost:3000/posts', {method: 'GET', headers: {'content-type': 'application/json'}}).then((res)=> { return res.json()}).then((data)=> {console.log(data); alert(data)})}>Get back</button>
-      <button onClick={() => console.log(Istate)}>Istate</button>
-      <></>
+      <button onClick={() => fetch('http://localhost:3000/posts', {method: 'GET', headers: {'content-type': 'application/json'}}).then((res)=> { return res.json()}).then((data)=> {console.log(data); alert(data)})}>Get back</button>
+      <button onClick={() => console.log(state)}>Istate</button>
     </>
   )
 }
