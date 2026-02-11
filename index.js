@@ -1,22 +1,10 @@
-class Name{
-    constructor(name){
-        this.name = name;
-    }
+const divE = document.getElementById('root');
 
-    set name(name){
-        if(typeof(name) === 'string'){
-         this._name = name;}
-        }
-
-    getName(){
-        return this._name;
-    }
-
-}
+const button = document.createElement('button');
+button.textContent = 'Click me';
+divE.appendChild(button);
 
 
-const me = new Name('John');
-
-console.log(me.getName());
-
-///////////
+button.addEventListener('click', () => {
+  alert('Button clicked!');
+});
