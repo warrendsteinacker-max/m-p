@@ -19,3 +19,4 @@ const me = new Name('John');
 
 console.log(me.getName());
 
+///////////
