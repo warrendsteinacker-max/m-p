@@ -3,13 +3,13 @@ import './App.css'
 
 function App() {
 useEffect(() => {
-  const button = document.createElement('button')
+  const button1 = document.createElement('button')
 
-  button.textContent = 'Click me'
-  document.getElementById('root').appendChild(button)
+  button1.textContent = 'Click me post'
+  document.getElementById('root').appendChild(button1)
 
-  button.addEventListener('click', () => {
-    alert('Button clicked!')
+  button1.addEventListener('click', () => {
+    fetch('http://localhost:3000/posts')
   })
 
   document.getElementById('H')
@@ -25,6 +25,7 @@ useEffect(() => {
     <>
       <div id='H'>
       </div>
+      <div id='Top' > HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH </div>
     </>
   )
 }

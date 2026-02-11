@@ -1,4 +1,10 @@
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   background-color: aqua;
 }
@@ -11,6 +17,18 @@ body{
   width: 500px;
   height: 500px;
   text-align: flex-end;
+  z-index: 2;
+}
+
+#Top{
+  position: absolute;
+  Top: 30%;
+  Left: 50%;
+  transition: transform(-50%, -30%);
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
 }
 
 .logo {
