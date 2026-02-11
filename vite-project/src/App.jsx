@@ -6,7 +6,7 @@ useEffect(() => {
   const e = document.getElementById('H')
 
   if(e){
-    e.textcontent = 'Hello World'
+    e.textContent = 'Hello World'
   }
 }, [])
 
