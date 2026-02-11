@@ -9,7 +9,8 @@ useEffect(() => {
   document.getElementById('root').appendChild(button1)
 
   button1.addEventListener('click', () => {
-    fetch('http://localhost:3000/posts')
+    const D = fetch('http://localhost:3000/posts').then((res)=> { return res.json()}).then((data)=> console.log(data))
+    alert(D)
   })
 
   document.getElementById('H')
