@@ -9,8 +9,7 @@ useEffect(() => {
   document.getElementById('root').appendChild(button1)
 
   button1.addEventListener('click', () => {
-    const D = fetch('http://localhost:3000/posts', {method: 'GET', headers: {'content-type': 'application/json'}}).then((res)=> { return res.json()}).then((data)=> console.log(data))
-    alert(D)
+    const D = fetch('http://localhost:3000/posts', {method: 'GET', headers: {'content-type': 'application/json'}}).then((res)=> { return res.json()}).then((data)=> {console.log(data); alert(data)})
   })
 
   document.getElementById('H')
@@ -22,11 +21,23 @@ useEffect(() => {
   }
 }, [])
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    fetch('http://localhost:3000/mposts', {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify())
+
+
   return (
     <>
       <div id='H'>
       </div>
       <div id='Top' > HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH </div>
+
+      <form onSubmit={}>
+        <input value={}></input>
+        <input value={}></input>
+        <button type='submit'>send to back</button>
+      </form>
     </>
   )
 }
