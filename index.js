@@ -33,7 +33,10 @@
 const obj = {
   num1: 1,
   num2: 2,
-  add: function() {() => {
+  add: function() {
+    this.num1 = this.num1
+    this.num2 = this.num2 
+    return () => {
     console.log(this.num1 + this.num2)
   }},
   sub: function() {
@@ -41,4 +44,4 @@ const obj = {
   }
   }
 
-  obj.add()
+  console.log(obj.add())
