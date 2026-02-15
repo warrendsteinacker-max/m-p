@@ -34,8 +34,6 @@ const obj = {
   num1: 1,
   num2: 2,
   add: function() {
-    this.num1 = this.num1
-    this.num2 = this.num2 
     return () => {
     console.log(this.num1 + this.num2)
   }},
@@ -44,4 +42,5 @@ const obj = {
   }
   }
 
-  console.log(obj.add())
+  const add = obj.add()
+  add()
