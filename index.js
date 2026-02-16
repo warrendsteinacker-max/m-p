@@ -16,6 +16,9 @@ const connectDB = async() => {
   }
 }
 
+
+
+
 connectDB()
 // jQXpt3wf8I13h1Gp
 app.use(cors())
