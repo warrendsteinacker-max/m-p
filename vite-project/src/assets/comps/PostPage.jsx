@@ -4,7 +4,7 @@ const PostPage = () => {
   return (
     <>
     <form>
-        <input></input>
+        <input>h</input>
     </form>
     </>
   )

@@ -65,7 +65,7 @@ const App = () => {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<LandingP/>}/>
-      <Route path='/addp' element={<Postpage/>}/>
+      <Route path='/addp' element={<PostPage/>}/>
     </Routes>
     </BrowserRouter>
     </>

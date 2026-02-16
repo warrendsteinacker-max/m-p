@@ -1,8 +1,8 @@
 import express from 'express'
 import cors from 'cors'
-import DATA from './DATA.js'
+import DATA from '../../DATA.js'
 import mongoose from 'mongoose'
-import { Stuff } from './Stuff.js'
+import { Stuff } from '../../Stuff.js'
 const app = express()
 const PORT = 3000
 
