@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 
 const LandingP = () => {
 
-    useEffect(() => {
+    // useEffect(() => {
 
-    }, [])
+    // }, [])
 
   return (
     <>
