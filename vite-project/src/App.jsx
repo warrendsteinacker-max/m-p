@@ -57,7 +57,7 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import LandingP from './assets/comps/landingP'
-// import PostPage from './assets/comps/PostPage'
+import PostPage from './assets/comps/PostPage'
 
 const App = () => {
   return (
@@ -65,7 +65,7 @@ const App = () => {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<LandingP/>}/>
-      {/* <Route path='/addp' element={<Postpage/>}/> */}
+      <Route path='/addp' element={<Postpage/>}/>
     </Routes>
     </BrowserRouter>
     </>

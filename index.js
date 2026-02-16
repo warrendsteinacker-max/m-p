@@ -25,11 +25,11 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 
-app.get('/posts', async (req, res) => {
+app.post('/posts', async (req, res) => {
   try{
     const {name, dep} = req.body
 
-    await Stuff.creat({name: name, dep: dep})
+    await Stuff.create({name: name, dep: dep})
 
     console.log('good')
 

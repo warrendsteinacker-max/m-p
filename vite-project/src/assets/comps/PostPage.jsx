@@ -1,13 +1,13 @@
-// import React from 'react'
+import React from 'react'
 
-// const PostPage = () => {
-//   return (
-//     <>
-//     <form>
-//         <input></input>
-//     </form>
-//     </>
-//   )
-// }
+const PostPage = () => {
+  return (
+    <>
+    <form>
+        <input></input>
+    </form>
+    </>
+  )
+}
 
-// export default PostPage
+export default PostPage

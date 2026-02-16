@@ -4,14 +4,14 @@ import mongoose from "mongoose";
 const stuff = new mongoose.Schema({
 
     name: {
-        type: string
+        type: String
     },
 
     dep: {
-        type: string
+        type: String
     },
     
-    timestamp: true
+
 
 })
 

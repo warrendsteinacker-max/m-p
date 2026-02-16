@@ -9,7 +9,7 @@ const LandingP = () => {
 
   return (
     <>
-
+        <Link to='/addp'>make post</Link>
     </>
     
   )
