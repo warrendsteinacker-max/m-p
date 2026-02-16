@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import DATA from './DATA.js'
 import mongoose from 'mongoose'
+import { Stuff } from './Stuff.js'
 const app = express()
 const PORT = 3000
 
@@ -24,8 +25,22 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 
-app.get('/posts', (req, res) => {
-  res.json(DATA)
+app.get('/posts', async (req, res) => {
+  try{
+    const {name, dep} = req.body
+
+    await Stuff.creat({name: name, dep: dep})
+
+    console.log('good')
+
+    res.status(200).send('all good')
+
+  }
+  catch(error){
+    console.error(error.message)
+    res.status(500).send('not good')
+  }
+
 })
 
 app.post('/mposts', (req, res) => {

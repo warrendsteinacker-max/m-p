@@ -55,10 +55,18 @@
 
 
 import React from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import LandingP from './assets/comps/landingP'
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<LandingP/>}/>
+    </Routes>
+    </BrowserRouter>
+    </>
   )
 }
 
